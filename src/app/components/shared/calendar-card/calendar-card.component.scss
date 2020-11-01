@@ -1,0 +1,49 @@
+.calendar-card {
+  border-bottom: 1px solid #f3f3f4;
+}
+
+.current-date {
+  border: 1px solid #f08900;
+  border-radius: 4px;
+}
+
+.active-date {
+  color: #fff;
+  background: #f08900;
+  border-radius: 4px;
+}
+
+.day {
+  width: 24px;
+  height: 24px;
+  margin: 5px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-box {
+  width: 100%;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.bg-green {
+  background-color: green;
+}
+
+.bg-red {
+  background-color: red;
+}
+
+.bg-grey {
+  background-color: #a1a1a1;
+}

@@ -1,0 +1,19 @@
+<div class="calendar my-5">
+  <div class="card">
+    <app-calendar-card
+      [days]="days"
+      [currentDay]="currentDate"
+      (activeDayEvent)="activeDay($event)"
+    ></app-calendar-card>
+    <app-timesheet-card
+      [selectedDate]="selectedDate"
+      [timesheetHours]="hours"
+      [timesheetExpenses]="expenses"
+      [timesheetAdditionalHours]="additionalHours"
+    ></app-timesheet-card>
+
+    <div class="container btn-box">
+      <button class="btn btn-add-task" routerLink="/home">ADD TASK</button>
+    </div>
+  </div>
+</div>

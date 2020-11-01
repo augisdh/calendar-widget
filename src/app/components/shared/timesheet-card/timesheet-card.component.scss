@@ -1,0 +1,17 @@
+.timesheet {
+  color: #f08900;
+  text-align: right;
+  cursor: pointer;
+}
+
+.info-card {
+  max-height: 350px;
+  -moz-overflow-style: none;
+  -ms-overflow-style: none;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.info-card::-webkit-scrollbar {
+  display: none;
+}

@@ -2,6 +2,11 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.4.
 
+## Steps to run calendar widget app
+Run `npm install` to install dependencies.
+Run `npm start` to run dev server. Navigate to `http://localhost:4200/`.
+Run `npm test` to execute the unit tests via JEST
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

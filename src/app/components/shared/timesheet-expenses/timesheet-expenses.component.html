@@ -1,0 +1,24 @@
+<div class="pb-3">
+  <div class="row header-timesheet py-2">
+    <div class="col d-flex align-items-center">
+      <div class="d-flex pr-1">
+        <mat-icon aria-hidden="false" aria-label="Example home icon"
+          >attach_money</mat-icon
+        >
+      </div>
+      <span class="font-16">Expenses</span>
+    </div>
+  </div>
+  <div class="row py-2">
+    <div class="col-6 font-12 font-grey">Type</div>
+    <div class="col font-12 font-grey text-right">Quantity</div>
+    <div class="col font-12 font-grey text-right">Total</div>
+  </div>
+  <div *ngFor="let expense of expenses" class="row">
+    <div class="col-6 font-12">{{ expense.eventTypeName }}</div>
+    <div class="col font-12 text-right">{{ expense.quantity }}</div>
+    <div class="col font-12 text-right">
+      {{ expense.quantity * expense.price }}
+    </div>
+  </div>
+</div>

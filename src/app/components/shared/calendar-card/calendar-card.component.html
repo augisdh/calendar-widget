@@ -1,0 +1,55 @@
+<div class="calendar-card container">
+  <div class="row my-3">
+    <div class="col d-flex justify-content-between">
+      <div>
+        <h4 class="font-16">
+          {{ monthNames[currentDay.month] }} {{ currentDay.monthDay }}
+        </h4>
+      </div>
+      <div>
+        <mat-icon
+          class="cursor-point"
+          aria-hidden="false"
+          aria-label="Example home icon"
+          (click)="selectDay(currentDay)"
+          >today</mat-icon
+        >
+      </div>
+    </div>
+  </div>
+  <div class="row mb-2">
+    <div *ngFor="let day of days" class="col">
+      <div
+        class="d-flex flex-column align-items-center cursor-point"
+        (click)="selectDay(day)"
+      >
+        <div
+          class="font-12"
+          [class.font-grey]="weekendNames.includes(day.weekDayName)"
+        >
+          {{ day.weekDayName | calendarDayName }}
+        </div>
+        <div
+          class="font-16 day"
+          [ngClass]="{
+            'current-date': day.monthDay === currentDay.monthDay,
+            'active-date': day.monthDay === activeDay
+          }"
+        >
+          {{ day.monthDay }}
+        </div>
+        <div class="font-12">{{ day.hours | calendarHour }}</div>
+        <div class="font-12 circle-box">
+          <div
+            class="circle"
+            [ngClass]="{
+              'bg-green': day.isApproved,
+              'bg-red': day.isRejected,
+              'bg-grey': !day.isApproved && !day.isRejected && day.containsTask
+            }"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

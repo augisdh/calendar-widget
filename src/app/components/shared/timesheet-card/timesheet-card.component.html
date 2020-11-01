@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row my-3">
+    <div class="col font-14">{{ selectedDate }}</div>
+    <div class="col font-14 timesheet">GO TO TIMESHEET</div>
+  </div>
+
+  <div class="info-card px-1">
+    <app-timesheet-hours
+      [hidden]="!timesheetHours || timesheetHours.length < 1"
+      [hours]="timesheetHours"
+    ></app-timesheet-hours>
+    <app-timesheet-expenses
+      [hidden]="!timesheetExpenses || timesheetExpenses.length < 1"
+      [expenses]="timesheetExpenses"
+    ></app-timesheet-expenses>
+    <app-timesheet-additional-hours
+      [hidden]="
+        !timesheetAdditionalHours || timesheetAdditionalHours.length < 1
+      "
+      [additionalHours]="timesheetAdditionalHours"
+    ></app-timesheet-additional-hours>
+  </div>
+</div>
