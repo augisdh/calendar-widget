@@ -10,7 +10,7 @@ import { AppState } from "src/app/store/state/app.state";
   styleUrls: ["./widget.component.scss"],
 })
 export class WidgetComponent implements OnInit {
-  calendarTasks: Task[];
+  calendarTasks: Task[] = [];
   constructor(private store: Store<AppState>) {}
 
   ngOnInit() {

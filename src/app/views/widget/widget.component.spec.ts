@@ -1,11 +1,12 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 import { MatIconModule } from "@angular/material";
+import { StoreModule } from "@ngrx/store";
 import { CalendarComponent } from "src/app/components/calendar/calendar.component";
 import { CalendarCardComponent } from "src/app/components/shared/calendar-card/calendar-card.component";
-import { TimesheetAdditionalHoursComponent } from 'src/app/components/shared/timesheet-additional-hours/timesheet-additional-hours.component';
+import { TimesheetAdditionalHoursComponent } from "src/app/components/shared/timesheet-additional-hours/timesheet-additional-hours.component";
 import { TimesheetCardComponent } from "src/app/components/shared/timesheet-card/timesheet-card.component";
-import { TimesheetExpensesComponent } from 'src/app/components/shared/timesheet-expenses/timesheet-expenses.component';
-import { TimesheetHoursComponent } from 'src/app/components/shared/timesheet-hours/timesheet-hours.component';
+import { TimesheetExpensesComponent } from "src/app/components/shared/timesheet-expenses/timesheet-expenses.component";
+import { TimesheetHoursComponent } from "src/app/components/shared/timesheet-hours/timesheet-hours.component";
 import { CalendarDayNamePipe } from "src/app/resources/pipes/calendar-day-name.pipe";
 import { CalendarHourPipe } from "src/app/resources/pipes/calendar-hour.pipe";
 
@@ -28,7 +29,7 @@ describe("WidgetComponent", () => {
         CalendarDayNamePipe,
         CalendarHourPipe,
       ],
-      imports: [MatIconModule],
+      imports: [MatIconModule, StoreModule.forRoot({})],
     }).compileComponents();
   }));
 
